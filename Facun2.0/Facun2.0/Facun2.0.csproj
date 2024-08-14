@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C2265BB-6728-4FCE-9987-8F2B329D945D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facun2._0</RootNamespace>
+    <AssemblyName>Facun2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Eslilos\css\style.css" />
+    <Content Include="Eslilos\images\unnamed.png" />
+    <Content Include="Eslilos\js\bootstrap.min.js" />
+    <Content Include="Eslilos\js\jquery.min.js" />
+    <Content Include="Eslilos\js\main.js" />
+    <Content Include="Eslilos\js\popper.js" />
+    <Content Include="EstilosLogin\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="EstilosLogin\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="EstilosLogin\css\bootstrap\mixins\_transition.css" />
+    <Content Include="EstilosLogin\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="EstilosLogin\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="EstilosLogin\css\bootstrap\_media.css" />
+    <Content Include="EstilosLogin\css\Login.css" />
+    <Content Include="EstilosLogin\images\bg-1.jpg" />
+    <Content Include="EstilosLogin\js\bootstrap.min.js" />
+    <Content Include="EstilosLogin\js\jquery.min.js" />
+    <Content Include="EstilosLogin\js\main.js" />
+    <Content Include="EstilosLogin\js\popper.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="obj\Debug\Facun2.0.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Facun2.0.dll" />
+    <Content Include="obj\Debug\Facun2.0.pdb" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Eslilos\js\.DS_Store" />
+    <None Include="EstilosLogin\css\bootstrap\.DS_Store" />
+    <None Include="EstilosLogin\css\bootstrap\mixins\.DS_Store" />
+    <None Include="EstilosLogin\fonts\.DS_Store" />
+    <None Include="EstilosLogin\js\.DS_Store" />
+    <None Include="EstilosLogin\scss\.DS_Store" />
+    <None Include="EstilosLogin\scss\bootstrap\.DS_Store" />
+    <None Include="EstilosLogin\scss\bootstrap\bootstrap-grid.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\bootstrap-reboot.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\bootstrap.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_alert.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_background-variant.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_badge.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_border-radius.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_box-shadow.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_breakpoints.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_buttons.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_caret.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_clearfix.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_deprecate.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_float.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_forms.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_gradients.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_grid-framework.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_grid.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_hover.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_image.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_list-group.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_lists.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_nav-divider.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_pagination.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_reset-text.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_resize.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_screen-reader.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_size.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_table-row.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_text-hide.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_text-truncate.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_transition.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\mixins\_visibility.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_align.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_background.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_borders.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_clearfix.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_display.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_embed.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_flex.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_float.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_overflow.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_position.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_screenreaders.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_shadows.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_sizing.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_spacing.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_stretched-link.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_text.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\utilities\_visibility.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\vendor\_rfs.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_alert.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_badge.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_breadcrumb.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_button-group.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_buttons.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_card.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_carousel.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_close.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_code.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_custom-forms.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_dropdown.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_forms.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_functions.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_grid.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_images.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_input-group.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_jumbotron.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_list-group.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_media.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_mixins.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_modal.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_nav.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_navbar.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_pagination.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_popover.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_print.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_progress.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_reboot.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_root.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_spinners.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_tables.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_toasts.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_tooltip.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_transitions.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_type.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_utilities.scss" />
+    <None Include="EstilosLogin\scss\bootstrap\_variables.scss" />
+    <None Include="EstilosLogin\scss\style.scss" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Eslilos\fonts\" />
+    <Folder Include="Eslilos\scss\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12898</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
