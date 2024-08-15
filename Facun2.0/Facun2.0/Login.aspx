@@ -40,18 +40,23 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="#" class="signin-form">
+							<form action="#" class="signin-form" runat="server">
 			      		<div class="form-group mt-3">
-			      			<input type="text" class="form-control" required>
+			      			<%--<input type="text" class="form-control" required>--%>
+                             <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
 			      			<label class="form-control-placeholder" for="username">Username</label>
 			      		</div>
 		            <div class="form-group">
-		              <input id="password-field" type="password" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Password</label>
+		             <%-- <input id="password-field" type="password" class="form-control" required>--%>
+		              <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                      <label class="form-control-placeholder" for="password">Password</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
 		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
+                        <asp:Button ID="btnLogin" 
+                            CssClass="form-control btn btn-primary rounded submit px-3" runat="server" 
+                            Text="Login" onclick="btnLogin_Click"></asp:Button>
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
