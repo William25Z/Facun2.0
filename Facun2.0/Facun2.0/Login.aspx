@@ -42,21 +42,50 @@
 			      	</div>
 							<form action="#" class="signin-form" runat="server">
 			      		<div class="form-group mt-3">
+                            <asp:Label ID="LabelUsuario" runat="server" Text="Usuario"></asp:Label>
 			      			<%--<input type="text" class="form-control" required>--%>
                              <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
-			      			<label class="form-control-placeholder" for="username">Username</label>
+			      			<%--<label class="form-control-placeholder" for="username">Username</label>--%>
+                            <asp:RequiredFieldValidator ID="rfvusuario" ControlToValidate="txtUsuario" runat="server"
+                                 ErrorMessage="Debe ingresar nombre de usuario" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+
 			      		</div>
 		            <div class="form-group">
+                     <asp:Label ID="LabelContraseña" runat="server" Text="Contraseña"></asp:Label>
 		             <%-- <input id="password-field" type="password" class="form-control" required>--%>
-		              <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-                      <label class="form-control-placeholder" for="password">Password</label>
+		              <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="txtContraseña2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+                      <%--<label class="form-control-placeholder" for="password">Contraseña</label>--%>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      <asp:RequiredFieldValidator ID="rfvContraseña" ErrorMessage="Debe ingresar Contraseña" 
+                           ControlToValidate="txtContraseña" runat="server" Text="*" ForeColor="Red"/>
+                      <asp:RequiredFieldValidator ID="rfvContraseña2" ErrorMessage="Debe repetir Contraseña" 
+                           ControlToValidate="txtContraseña2" runat="server" Text="*" ForeColor="Red"/>
+                      <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas deben ser iguales"
+                           ControlToValidate="txtContraseña" ControlToCompare="txtContraseña2" Text="*" ForeColor="Red"></asp:CompareValidator>
 		            </div>
-		            <div class="form-group">
+
+                    <div class="form-group">
+                     <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
+		             <asp:TextBox ID="txtEmail" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="rfvEmail" ErrorMessage="Debe ingresar Email" 
+                           ControlToValidate="txtEmail" runat="server" Text="*" ForeColor="Red"/>
+		            </div>
+
+                    <div class="form-group">
+                     <asp:Label ID="LabelDNI" runat="server" Text="DNI"></asp:Label>
+		             <asp:TextBox ID="txtDNI" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="rfvDNI" ErrorMessage="Debe ingresar DNI" 
+                           ControlToValidate="txtDNI" runat="server" Text="*" ForeColor="Red"/>
+                     <asp:RangeValidator ID="rvDNI" MinimumValue="11111111" MaximumValue="99999999" Type="Integer" 
+                     ControlToValidate="txtDNI" runat="server" ErrorMessage="Debe ingresar un DNI valido" Text="*" ForeColor="Red"></asp:RangeValidator>
+		            </div>
+                    
+                    <div class="form-group">
 		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
-                        <asp:Button ID="btnLogin" 
-                            CssClass="form-control btn btn-primary rounded submit px-3" runat="server" 
+                        <asp:Button ID="btnLogin" CssClass="form-control btn btn-primary rounded submit px-3" runat="server" 
                             Text="Login" onclick="btnLogin_Click"></asp:Button>
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
@@ -69,6 +98,7 @@
 										<a href="#">Forgot Password</a>
 									</div>
 		            </div>
+                    <asp:Label ID="lblTexto" runat="server" Text=""></asp:Label>
 		          </form>
 		          <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
 		        </div>
