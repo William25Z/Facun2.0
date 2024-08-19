@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Facun2._0.Login1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Facun2._0.Login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -31,7 +31,7 @@
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
-			      			<h3 class="mb-4">Inicio de sesion</h3>
+			      			<h3 class="mb-4">Sign In</h3>
 			      		</div>
 								<div class="w-100">
 									<p class="social-media d-flex justify-content-end">
@@ -40,7 +40,7 @@
 									</p>
 								</div>
 			      	</div>
-							<form id="Form1" action="#" class="signin-form" runat="server">
+							<form action="#" class="signin-form" runat="server">
 			      		<div class="form-group mt-3">
                             <asp:Label ID="LabelUsuario" runat="server" Text="Usuario"></asp:Label>
 			      			<%--<input type="text" class="form-control" required>--%>
@@ -54,18 +54,18 @@
                      <asp:Label ID="LabelContraseña" runat="server" Text="Contraseña"></asp:Label>
 		             <%-- <input id="password-field" type="password" class="form-control" required>--%>
 		              <asp:TextBox ID="txtContraseña" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-                      <%--<asp:TextBox ID="txtContraseña2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>--%>
+                      <asp:TextBox ID="txtContraseña2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                       <%--<label class="form-control-placeholder" for="password">Contraseña</label>--%>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                       <asp:RequiredFieldValidator ID="rfvContraseña" ErrorMessage="Debe ingresar Contraseña" 
                            ControlToValidate="txtContraseña" runat="server" Text="*" ForeColor="Red"/>
-                     <%-- <asp:RequiredFieldValidator ID="rfvContraseña2" ErrorMessage="Debe repetir Contraseña" 
+                      <asp:RequiredFieldValidator ID="rfvContraseña2" ErrorMessage="Debe repetir Contraseña" 
                            ControlToValidate="txtContraseña2" runat="server" Text="*" ForeColor="Red"/>
                       <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas deben ser iguales"
-                           ControlToValidate="txtContraseña" ControlToCompare="txtContraseña2" Text="*" ForeColor="Red"></asp:CompareValidator>--%>
+                           ControlToValidate="txtContraseña" ControlToCompare="txtContraseña2" Text="*" ForeColor="Red"></asp:CompareValidator>
 		            </div>
 
-                   <%-- <div class="form-group">
+                    <div class="form-group">
                      <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
 		             <asp:TextBox ID="txtEmail" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rfvEmail" ErrorMessage="Debe ingresar Email" 
@@ -79,7 +79,7 @@
                            ControlToValidate="txtDNI" runat="server" Text="*" ForeColor="Red"/>
                      <asp:RangeValidator ID="rvDNI" MinimumValue="11111111" MaximumValue="99999999" Type="Integer" 
                      ControlToValidate="txtDNI" runat="server" ErrorMessage="Debe ingresar un DNI valido" Text="*" ForeColor="Red"></asp:RangeValidator>
-		            </div>--%>
+		            </div>
                     
                     <div class="form-group">
 		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>
