@@ -78,13 +78,13 @@ namespace Facun2._0
 
                 using (SqlConnection conn = new SqlConnection(builder.ConnectionString))
                 {
-                    string script = String.Format("INSERT INTO LOGIN (Usuario, Contraseña, Email, DNI) VALUES('{0}', '{1}', {2}, '{3}')", txtUsuario.Text, txtContraseña.Text, txtEmail.Text, txtDNI.Text);
+                    string script = String.Format("INSERT INTO LOGIN (Usuario, Contraseña, Email, DNI) VALUES('{0}', '{1}', '{2}', {3})", txtUsuario.Text, txtContraseña.Text, txtEmail.Text, txtDNI.Text);
 
                     conn.Open();
 
                     SqlCommand command = new SqlCommand(script, conn);
 
-                    int resp = command.ExecuteNonQuery(); ////// ERROR
+                    int resp = command.ExecuteNonQuery(); 
 
                     if (resp > 0)
                     {
