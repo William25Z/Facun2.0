@@ -21,18 +21,20 @@ namespace Facun2._0
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(Cadena))
+            {
                 try
                 {
-                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                    builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
-                    builder.InitialCatalog = "Facun2DB";
+                    //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    //builder.DataSource = "BANGHO";
+                    //builder.InitialCatalog = "ABM_BIB";
                     //builder.UserID = "sa";
                     //builder.Password = "13213";
-                    builder.ApplicationName = "Facun2DB";
 
-                    string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text +
-                                    "' AND CONTRASEÑA = '" + txtContraseña.Text + "'";
-                    
+                    string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
+                        " PASS = '" + txtContraseña.Text + "'";
+
+                    connection.Open();
+
                     SqlCommand command = new SqlCommand(script, connection);
 
                     SqlDataReader reader = command.ExecuteReader();
@@ -40,16 +42,15 @@ namespace Facun2._0
                     int filas = command.ExecuteNonQuery();
 
                     connection.Close();
-                    //connection.Open();
 
-                    if (filas > 0) //reader.HasRows??
+                    if (filas < 0)
                     {
                         Session["Usuario"] = txtUsuario.Text;
-                        //Page.Response.Redirect("Inicio.aspx");
-                        Response.Redirect("Inicio.aspx", true);
+                        Page.Response.Redirect("Inicio.aspx");
+                        //Response.Redirect("Inicio.aspx", true);
                     }
                     else
-                        lblTexto.Text = "Usuario o Password incorrectos.";
+                        lblTexto.Text = "Usuario o Contraseña incorrectos.";
 
                     reader.Close();
 
@@ -59,6 +60,8 @@ namespace Facun2._0
                 {
                     Console.WriteLine(exception.Message);
                 }
+            }
+
         }
     }
 }

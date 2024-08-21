@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 05</title>
+  	<title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,7 +21,7 @@
 		<div class="container">
         		<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login #05</h2>
+					<h2 class="heading-section">Login</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -35,8 +35,8 @@
 			      		</div>
 								<div class="w-100">
 									<p class="social-media d-flex justify-content-end">
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+										<a href="https://isfdyt46-bue.infd.edu.ar/sitio/" target="_blank" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-university"></span></a>
+										<a href="https://www.instagram.com/instituto.46/?hl=es" target="_blank" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-instagram"></span></a>
 									</p>
 								</div>
 			      	</div>
@@ -89,18 +89,18 @@
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+			            	<label class="checkbox-wrap checkbox-primary mb-0">Recordar Usuario
 									  <input type="checkbox" checked>
 									  <span class="checkmark"></span>
 										</label>
 									</div>
-									<div class="w-50 text-md-right">
+									<%--<div class="w-50 text-md-right">
 										<a href="#">Forgot Password</a>
-									</div>
+									</div>--%>
 		            </div>
                     <asp:Label ID="lblTexto" runat="server" Text=""></asp:Label>
 		          </form>
-		          <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+		          <%--<p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>--%>
 		        </div>
 		      </div>
 				</div>
