@@ -31,13 +31,13 @@ namespace Facun2._0
                     //builder.Password = "13213";
 
                     string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
-                        " PASS = '" + txtContraseña.Text + "'";
+                        " CONTRASEÑA = '" + txtContraseña.Text + "'";
 
                     connection.Open();
 
                     SqlCommand command = new SqlCommand(script, connection);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    //SqlDataReader reader = command.ExecuteReader();
 
                     int filas = command.ExecuteNonQuery();
 
@@ -49,10 +49,10 @@ namespace Facun2._0
                         Page.Response.Redirect("Inicio.aspx");
                         //Response.Redirect("Inicio.aspx", true);
                     }
-                    else
-                        lblTexto.Text = "Usuario o Contraseña incorrectos.";
+                    //else
+                    //    lblTexto.Text = "Usuario o Contraseña incorrectos.";
 
-                    reader.Close();
+                    //reader.Close();
 
 
                 }
