@@ -22,45 +22,7 @@ namespace Facun2._0
         {
             using (SqlConnection connection = new SqlConnection(Cadena))
             {
-                //try
-                //{
-                //    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                //    builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
-                //    builder.InitialCatalog = "Facun2DB";
-                //    //builder.UserID = "sa";
-                //    //builder.Password = "13213";
-
-                //    string script = "SELECT USUARIO FROM USUARIOS WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
-                //        " CONTRASEÑA = '" + txtContraseña.Text + "'";
-
-                //    connection.Open();
-
-                //    SqlCommand command = new SqlCommand(script, connection);
-
-                //    SqlDataReader reader = command.ExecuteReader();
-
-                //    int filas = command.ExecuteNonQuery();
-
-                //    connection.Close();
-
-                //    if (filas < 0)
-                //    {
-                //        Session["Usuario"] = txtUsuario.Text;
-                //        Page.Response.Redirect("Inicio.aspx");
-                //        Response.Redirect("Inicio.aspx", true);
-                //    }
-                //    else
-                //        lblTexto.Text = "Usuario o Password incorrectos.";
-
-                //    reader.Close();
-
-
-                //}
-                //catch (Exception exception)
-                //{
-                //    Console.WriteLine(exception.Message);
-                //}
-
+                
 
                 if (!String.IsNullOrEmpty(txtUsuario.Text) && !String.IsNullOrEmpty(txtDNI.Text))
             {

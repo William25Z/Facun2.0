@@ -24,37 +24,48 @@ namespace Facun2._0
             {
                 try
                 {
-                    //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                    //builder.DataSource = "BANGHO";
-                    //builder.InitialCatalog = "ABM_BIB";
-                    //builder.UserID = "sa";
-                    //builder.Password = "13213";
+                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    //Nombre del servidor o DataSource
+                    builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
+                    //Nombre de la base de datos
+                    builder.InitialCatalog = "Facun2DB";
+                    //Indicamos que se trata de Seguridad Integrada
+                    builder.IntegratedSecurity = true;
+                    builder.PersistSecurityInfo = true;
+                    builder.ApplicationName = "Facun2DB";
 
-                    string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
-                        " CONTRASEÑA = '" + txtContraseña.Text + "'";
-
-                    connection.Open();
-
-                    SqlCommand command = new SqlCommand(script, connection);
-
-                    //SqlDataReader reader = command.ExecuteReader();
-
-                    int filas = command.ExecuteNonQuery();
-
-                    connection.Close();
-
-                    if (filas < 0)
+                    using (SqlConnection conn = new SqlConnection(builder.ConnectionString))
                     {
-                        Session["Usuario"] = txtUsuario.Text;
-                        Page.Response.Redirect("Inicio.aspx");
-                        //Response.Redirect("Inicio.aspx", true);
+
+                        string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
+                                " CONTRASEÑA = '" + txtContraseña.Text + "'";
+
+                        //connection.Open();
+                        conn.Open();
+
+                        SqlCommand command = new SqlCommand(script, conn);
+
+                        //SqlDataReader reader = command.ExecuteReader();
+
+                        int filas = command.ExecuteNonQuery();
+
+                        //connection.Close();
+
+                        if (filas < 0)
+                        {
+                            Session["Usuario"] = txtUsuario.Text;
+                            Page.Response.Redirect("Inicio.aspx");
+                            //Response.Redirect("Inicio.aspx", true);
+                        }
+
+                        else
+                            lblTexto.Text = "Usuario o Contraseña incorrectos.";
+
+                        //reader.Close();
+
+                        //connection.Close();
+                        conn.Close();
                     }
-                    //else
-                    //    lblTexto.Text = "Usuario o Contraseña incorrectos.";
-
-                    //reader.Close();
-
-
                 }
                 catch (Exception exception)
                 {
