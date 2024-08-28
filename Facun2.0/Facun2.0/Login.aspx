@@ -21,7 +21,7 @@
 		<div class="container">
         		<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login</h2>
+					<h2 class="heading-section">Inicio</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -59,27 +59,8 @@
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                       <asp:RequiredFieldValidator ID="rfvContraseña" ErrorMessage="Debe ingresar Contraseña" 
                            ControlToValidate="txtContraseña" runat="server" Text="*" ForeColor="Red"/>
-                     <%-- <asp:RequiredFieldValidator ID="rfvContraseña2" ErrorMessage="Debe repetir Contraseña" 
-                           ControlToValidate="txtContraseña2" runat="server" Text="*" ForeColor="Red"/>
-                      <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas deben ser iguales"
-                           ControlToValidate="txtContraseña" ControlToCompare="txtContraseña2" Text="*" ForeColor="Red"></asp:CompareValidator>--%>
 		            </div>
 
-                   <%-- <div class="form-group">
-                     <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
-		             <asp:TextBox ID="txtEmail" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
-                     <asp:RequiredFieldValidator ID="rfvEmail" ErrorMessage="Debe ingresar Email" 
-                           ControlToValidate="txtEmail" runat="server" Text="*" ForeColor="Red"/>
-		            </div>
-
-                    <div class="form-group">
-                     <asp:Label ID="LabelDNI" runat="server" Text="DNI"></asp:Label>
-		             <asp:TextBox ID="txtDNI" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
-                     <asp:RequiredFieldValidator ID="rfvDNI" ErrorMessage="Debe ingresar DNI" 
-                           ControlToValidate="txtDNI" runat="server" Text="*" ForeColor="Red"/>
-                     <asp:RangeValidator ID="rvDNI" MinimumValue="11111111" MaximumValue="99999999" Type="Integer" 
-                     ControlToValidate="txtDNI" runat="server" ErrorMessage="Debe ingresar un DNI valido" Text="*" ForeColor="Red"></asp:RangeValidator>
-		            </div>--%>
                     
                     <div class="form-group">
 		            	<%--<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>--%>

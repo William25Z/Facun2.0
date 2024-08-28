@@ -21,7 +21,7 @@
 		<div class="container">
         		<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login #05</h2>
+					<h2 class="heading-section">Registro de usuario</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -31,7 +31,7 @@
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
-			      			<h3 class="mb-4">Sign In</h3>
+			      			<h3 class="mb-4">Registro</h3>
 			      		</div>
 								<div class="w-100">
 									<p class="social-media d-flex justify-content-end">

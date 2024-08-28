@@ -28,8 +28,12 @@ namespace Facun2._0
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
            
-                //Nombre del servidor o DataSource
+                //EZE
                 builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
+
+                //ESCUELA
+                //builder.DataSource = "DESKTOP-U48JRI6\\SQLEXPRESS";
+
                 //Nombre de la base de datos
                 builder.InitialCatalog = "Facun2DB";
                 //Indicamos que se trata de Seguridad Integrada
@@ -51,7 +55,8 @@ namespace Facun2._0
                     if (resp > 0)
                     {
                         LabelUsuario.Text = "Se ha generado el usuario " + txtUsuario.Text + " DNI: " + txtDNI.Text;
-                        //LabelUsuario.ForeColor = Color.Green;
+                        lblTexto.ForeColor = System.Drawing.Color.Green;
+                        lblTexto.Focus();
                         txtUsuario.Text = "";
                         txtContraseña.Text = "";
                         txtEmail.Text = "";
@@ -60,39 +65,13 @@ namespace Facun2._0
                     else
                     {
                         lblTexto.Text = "Ha ocurrido un error";
-                        //lblTexto.ForeColor = Color.Red;
+                        lblTexto.ForeColor = System.Drawing.Color.Red;
+                        lblTexto.Focus();
                     }
 
-                    //if (reader.HasRows)
-                    //{
-                    //    while (reader.Read())
-                    //    {
-                    //        string id = reader.GetInt32(0).ToString();
-                    //        string nombre = reader.GetString(1);
-                    //        lblTexto.Text = "Se ha creado el usuario " + nombre;
-                    //    }
-                    //}
-
-                    //reader.Close();
                     conn.Close();
                 }
 
-                //OdbcConnection cn = new OdbcConnection("DSN=NombreConexion;UID=sa;PWD=123456");
-                //OdbcCommand cmd = new OdbcCommand("select minvalue,maxvalue from tblRDvalidRange");
-                //cn.Open();
-                //cmd.Connection = cn;
-                //OdbcDataReader rd = cmd.ExecuteReader();
-
-                //if (rd.Read())
-                //{
-                //    int minvalue = System.Convert.ToInt32(rd[0]);
-                //    int maxvalue = System.Convert.ToInt32(rd[1]);
-                //}
-
-                //cn.Close();
-
-
-                //lblTexto.Text = "Se ha generado el usuario para " + txtNombre.Text + " " + txtApellido.Text;
             }
             else
             {

@@ -25,8 +25,12 @@ namespace Facun2._0
                 try
                 {
                     SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                    //Nombre del servidor o DataSource
+                    //EZE
                     builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
+
+                    //ESCUELA
+                    //builder.DataSource = "DESKTOP-U48JRI6\\SQLEXPRESS";
+
                     //Nombre de la base de datos
                     builder.InitialCatalog = "Facun2DB";
                     //Indicamos que se trata de Seguridad Integrada
@@ -37,7 +41,7 @@ namespace Facun2._0
                     using (SqlConnection conn = new SqlConnection(builder.ConnectionString))
                     {
 
-                        string script = "SELECT USUARIO FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
+                        string script = "SELECT COUNT(*) FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
                                 " CONTRASEÑA = '" + txtContraseña.Text + "'";
 
                         //connection.Open();
@@ -45,13 +49,11 @@ namespace Facun2._0
 
                         SqlCommand command = new SqlCommand(script, conn);
 
-                        //SqlDataReader reader = command.ExecuteReader();
+                        //int filas = command.ExecuteNonQuery();
+                        int count = (int)command.ExecuteScalar();
 
-                        int filas = command.ExecuteNonQuery();
-
-                        //connection.Close();
-
-                        if (filas < 0)
+                        //if (filas < 0)
+                        if (count > 0)
                         {
                             Session["Usuario"] = txtUsuario.Text;
                             Page.Response.Redirect("Inicio.aspx");
@@ -60,10 +62,8 @@ namespace Facun2._0
 
                         else
                             lblTexto.Text = "Usuario o Contraseña incorrectos.";
-
-                        //reader.Close();
-
-                        //connection.Close();
+                        lblTexto.ForeColor = System.Drawing.Color.Red;
+                        lblTexto.Focus();
                         conn.Close();
                     }
                 }
