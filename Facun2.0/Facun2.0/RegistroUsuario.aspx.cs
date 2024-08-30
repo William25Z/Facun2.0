@@ -24,7 +24,7 @@ namespace Facun2._0
             {
                 
 
-                if (!String.IsNullOrEmpty(txtUsuario.Text) && !String.IsNullOrEmpty(txtDNI.Text))
+                if (!String.IsNullOrEmpty(textApellido.Text) && !String.IsNullOrEmpty(textDNI.Text))
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
            
@@ -44,7 +44,8 @@ namespace Facun2._0
 
                 using (SqlConnection conn = new SqlConnection(builder.ConnectionString))
                 {
-                    string script = String.Format("INSERT INTO LOGIN (Usuario, Contraseña, Email, DNI) VALUES('{0}', '{1}', '{2}', {3})", txtUsuario.Text, txtContraseña.Text, txtEmail.Text, txtDNI.Text);
+                    string script = String.Format("INSERT INTO USUARIO (Nombre, Apellido, Email, Contraseña, TipoUsuario, Nacimiento, DNI, IdCarrera, IdMateria) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', {6}, {7}, {8})",
+                                                    textNombre.Text, textApellido.Text, textEmail.Text, textContraseña.Text, textTipo.Text, textNacimiento.Text, textDNI.Text, textCarrera.Text, textMateria.Text);
 
                     conn.Open();
 
@@ -54,13 +55,19 @@ namespace Facun2._0
 
                     if (resp > 0)
                     {
-                        LabelUsuario.Text = "Se ha generado el usuario " + txtUsuario.Text + " DNI: " + txtDNI.Text;
+                        LabelNombre.Text = "Se ha generado el usuario " + textApellido.Text + " DNI: " + textDNI.Text;
                         lblTexto.ForeColor = System.Drawing.Color.Green;
                         lblTexto.Focus();
-                        txtUsuario.Text = "";
-                        txtContraseña.Text = "";
-                        txtEmail.Text = "";
-                        txtDNI.Text = "";
+                        textNombre.Text = "";
+                        textApellido.Text = "";
+                        textContraseña.Text = "";
+                        textContraseña2.Text = "";
+                        textEmail.Text = "";
+                        textDNI.Text = "";
+                        textTipo.Text = "";
+                        textNacimiento.Text = "";
+                        textMateria.Text = "";
+                        textCarrera.Text = "";
                     }
                     else
                     {

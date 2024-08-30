@@ -76,7 +76,8 @@
     <Content Include="Estilos\js\jquery.min.js" />
     <Content Include="Estilos\js\main.js" />
     <Content Include="Estilos\js\popper.js" />
-    <Content Include="Inicio.aspx" />
+    <Content Include="InicioAlumno.aspx" />
+    <Content Include="InicioProfesor.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="RegistroUsuario.aspx" />
     <Content Include="obj\Debug\Facun2.0.csproj.FileListAbsolute.txt" />
@@ -93,12 +94,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="InicioAlumno.aspx.cs">
+      <DependentUpon>InicioAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="InicioAlumno.aspx.designer.cs">
+      <DependentUpon>InicioAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioProfesor.aspx.cs">
+      <DependentUpon>InicioProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioProfesor.aspx.designer.cs">
+      <DependentUpon>InicioProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

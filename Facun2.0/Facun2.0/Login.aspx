@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Facun2._0.Login1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="~/Login.aspx.cs" Inherits="Facun2._0.Login1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -21,7 +21,7 @@
 		<div class="container">
         		<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Inicio</h2>
+					<h2 class="heading-section">Login</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -42,12 +42,12 @@
 			      	</div>
 							<form id="Form1" action="#" class="signin-form" runat="server">
 			      		<div class="form-group mt-3">
-                            <asp:Label ID="LabelUsuario" runat="server" Text="Usuario"></asp:Label>
+                            <asp:Label ID="LabelDNI" runat="server" Text="DNI"></asp:Label>
 			      			<%--<input type="text" class="form-control" required>--%>
-                             <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                             <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server"></asp:TextBox>
 			      			<%--<label class="form-control-placeholder" for="username">Username</label>--%>
-                            <asp:RequiredFieldValidator ID="rfvusuario" ControlToValidate="txtUsuario" runat="server"
-                                 ErrorMessage="Debe ingresar nombre de usuario" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="rfvusuario" ControlToValidate="txtDNI" runat="server"
+                                 ErrorMessage="Debe ingresar DNI" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
 
 			      		</div>
 		            <div class="form-group">

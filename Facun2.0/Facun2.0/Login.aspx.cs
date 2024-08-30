@@ -41,9 +41,12 @@ namespace Facun2._0
                     using (SqlConnection conn = new SqlConnection(builder.ConnectionString))
                     {
 
-                        string script = "SELECT COUNT(*) FROM LOGIN WHERE USUARIO = '" + txtUsuario.Text + "' AND" +
+                        string script = "SELECT COUNT(*) FROM USUARIO WHERE DNI = " + txtDNI.Text + " AND" +
                                 " CONTRASEÑA = '" + txtContraseña.Text + "'";
+                        string query = "SELECT TipoUsuario FROM Usuario WHERE DNI = " + txtDNI.Text + " AND Contraseña = '" + txtContraseña.Text + "'";
 
+                        SqlCommand commando = new SqlCommand(query, conn);
+                        
                         //connection.Open();
                         conn.Open();
 
@@ -52,11 +55,29 @@ namespace Facun2._0
                         //int filas = command.ExecuteNonQuery();
                         int count = (int)command.ExecuteScalar();
 
+                        using (SqlDataReader reader = commando.ExecuteReader())
                         //if (filas < 0)
                         if (count > 0)
                         {
-                            Session["Usuario"] = txtUsuario.Text;
-                            Page.Response.Redirect("Inicio.aspx");
+                            
+                            if (reader.Read())  
+                            {
+                                string Tipo = reader["Tipo"].ToString(); // Obtener el valor del atributo 'Tipo'
+
+                                // Verificar si el Tipo = "A" (mayúscula)
+                                if (Tipo.Equals("A"))
+                                {
+                                    // Redirigir a la página de inicio si cumple la condición
+                                    Response.Redirect("InicioAlumno.aspx"); 
+                                }
+                                else if (Tipo.Equals("a"))
+                                {
+                                    // Verificar si el Tipo = "a" (minuscula)
+                                    Response.Redirect("InicioAlumno.aspx"); 
+                                }
+                            }
+                            Session["Usuario"] = txtDNI.Text;
+                            Page.Response.Redirect("InicioProfesor.aspx");
                             //Response.Redirect("Inicio.aspx", true);
                         }
 
