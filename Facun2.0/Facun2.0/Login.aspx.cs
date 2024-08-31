@@ -26,10 +26,13 @@ namespace Facun2._0
                 {
                     SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
                     //EZE
-                    builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
+                    //builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
 
                     //ESCUELA
                     //builder.DataSource = "DESKTOP-U48JRI6\\SQLEXPRESS";
+
+                    //HUGO
+                builder.DataSource = "DESKTOP-L84NEUL";
 
                     //Nombre de la base de datos
                     builder.InitialCatalog = "Facun2DB";
@@ -62,21 +65,23 @@ namespace Facun2._0
                             
                             if (reader.Read())  
                             {
-                                string Tipo = reader["Tipo"].ToString(); // Obtener el valor del atributo 'Tipo'
+                                string Tipo = reader["TipoUsuario"].ToString(); // Obtener el valor del atributo 'Tipo'
 
                                 // Verificar si el Tipo = "A" (mayúscula)
                                 if (Tipo.Equals("A"))
                                 {
                                     // Redirigir a la página de inicio si cumple la condición
+                                    Session["Usuario"] = txtDNI.Text;
                                     Response.Redirect("InicioAlumno.aspx"); 
                                 }
                                 else if (Tipo.Equals("a"))
                                 {
                                     // Verificar si el Tipo = "a" (minuscula)
+                                    Session["Usuario"] = txtDNI.Text;
                                     Response.Redirect("InicioAlumno.aspx"); 
                                 }
                             }
-                            Session["Usuario"] = txtDNI.Text;
+                            else Session["Usuario"] = txtDNI.Text;
                             Page.Response.Redirect("InicioProfesor.aspx");
                             //Response.Redirect("Inicio.aspx", true);
                         }

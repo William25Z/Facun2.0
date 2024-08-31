@@ -8197,7 +8197,7 @@ h1, h2, h3, h4, h5,
   -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
   box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24); }
   .wrap .img {
-    height: 200px; }
+    height: 467px; }
 
 .login-wrap {
   position: relative; }
@@ -8270,7 +8270,11 @@ h1, h2, h3, h4, h5,
 
 .social-media {
   position: relative;
-  width: 100%; }
+  width: 100%;
+    top: -7px;
+    left: 0px;
+    height: 35px;
+}
   .social-media .social-icon {
     display: block;
     width: 40px;
@@ -8340,7 +8344,10 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #01d28e; }
+  color: #01d28e;
+    top: 0px;
+    left: 0px;
+}
   .checkbox-primary input:checked ~ .checkmark:after {
     color: #01d28e; }
 

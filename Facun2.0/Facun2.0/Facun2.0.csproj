@@ -94,6 +94,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="hieght.cs" />
     <Compile Include="InicioAlumno.aspx.cs">
       <DependentUpon>InicioAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
