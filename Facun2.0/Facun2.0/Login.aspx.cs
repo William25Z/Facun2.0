@@ -29,10 +29,10 @@ namespace Facun2._0
                     //builder.DataSource = "DESKTOP-QSS2PVA\\SQLEXPRESS";
 
                     //ESCUELA
-                    //builder.DataSource = "DESKTOP-U48JRI6\\SQLEXPRESS";
+                    builder.DataSource = "DESKTOP-U48JRI6\\SQLEXPRESS";
 
                     //HUGO
-                builder.DataSource = "DESKTOP-L84NEUL";
+                //builder.DataSource = "DESKTOP-L84NEUL";
 
                     //Nombre de la base de datos
                     builder.InitialCatalog = "Facun2DB";
@@ -78,11 +78,11 @@ namespace Facun2._0
                                 {
                                     // Verificar si el Tipo = "a" (minuscula)
                                     Session["Usuario"] = txtDNI.Text;
-                                    Response.Redirect("InicioAlumno.aspx"); 
+                                    Response.Redirect("Login.aspx"); 
                                 }
                             }
                             else Session["Usuario"] = txtDNI.Text;
-                            Page.Response.Redirect("InicioProfesor.aspx");
+                            Page.Response.Redirect("Login.aspx");
                             //Response.Redirect("Inicio.aspx", true);
                         }
 

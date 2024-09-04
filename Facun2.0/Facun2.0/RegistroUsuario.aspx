@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 05</title>
+  	<title>Registro Usuario</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,8 +27,10 @@
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5">
 					<div class="wrap">
+                            <div align="center" style="padding: 10px">
                         <asp:Image ID="Image1" runat="server" Height="200px" 
                             ImageUrl="~/Estilos/images/inst.png" Width="200px"></asp:Image>
+                            </div>
 						<%--<div class="img" style="background-image: url(Estilos/images/inst.png); "></div>--%>
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
@@ -42,14 +44,14 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="#" class="signin-form" runat="server">
+							<form id="form1" runat="server">
 			      		<div class="form-group mt-3">
                             <asp:Label ID="LabelNombre" runat="server" Text="Nombre"></asp:Label>
 			      			<%--<input type="text" class="form-control" required>--%>
                              <asp:TextBox ID="textNombre" CssClass="form-control" runat="server"></asp:TextBox>
 			      			<%--<label class="form-control-placeholder" for="username">Username</label>--%>
                             <asp:RequiredFieldValidator ID="rfvNombre" ControlToValidate="textNombre" runat="server"
-                                 ErrorMessage="Debe ingresar nombre" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                 ErrorMessage="Debe ingresar nombre" Text="* Ingrese Nombre" ForeColor="Red"></asp:RequiredFieldValidator>
 			      		</div>
 
                         	<div class="form-group mt-3">
@@ -58,29 +60,33 @@
                              <asp:TextBox ID="textApellido" CssClass="form-control" runat="server"></asp:TextBox>
 			      			<%--<label class="form-control-placeholder" for="username">Username</label>--%>
                             <asp:RequiredFieldValidator ID="rfvApellido" ControlToValidate="textApellido" runat="server"
-                                 ErrorMessage="Debe ingresar Apellido" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                                 ErrorMessage="Debe ingresar Apellido" Text="* Ingrese Apellido" ForeColor="Red"></asp:RequiredFieldValidator>
 			      		</div>
 
                            <div class="form-group">
-                     <asp:Label ID="LblEmail" runat="server" Text="Emai l"></asp:Label>
+                     <asp:Label ID="LblEmail" runat="server" Text="E-mail"></asp:Label>
 		             <asp:TextBox ID="textEmail" TextMode="Email" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rvEmail" ErrorMessage="Debe ingresar Email" 
-                           ControlToValidate="textEmail" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textEmail" runat="server" Text="* E-mail" ForeColor="Red"/>
 		            </div>                   
 
                     <div class="form-group">
                      <asp:Label ID="LblContraseña" runat="server" Text="Contraseña"></asp:Label>
 		             <%-- <input id="password-field" type="password" class="form-control" required>--%>
 		              <asp:TextBox ID="textContraseña" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
+
+                      <asp:RequiredFieldValidator ID="rvContraseña" ErrorMessage="Debe ingresar Contraseña" 
+                           ControlToValidate="textContraseña" runat="server" Text="* Ingrese Contraseña" ForeColor="Red"/>
+
                       <asp:TextBox ID="textContraseña2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                       <%--<label class="form-control-placeholder" for="password">Contraseña</label>--%>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                      <asp:RequiredFieldValidator ID="rvContraseña" ErrorMessage="Debe ingresar Contraseña" 
-                           ControlToValidate="textContraseña" runat="server" Text="*" ForeColor="Red"/>
+
                       <asp:RequiredFieldValidator ID="rvContraseña2" ErrorMessage="Debe repetir Contraseña" 
-                           ControlToValidate="textContraseña2" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textContraseña2" runat="server" Text="* Ingrese Contraseña" ForeColor="Red"/>
+
                       <asp:CompareValidator ID="CompareContraseña" runat="server" ErrorMessage="Las contraseñas deben ser iguales"
-                           ControlToValidate="textContraseña" ControlToCompare="textContraseña2" Text="*" ForeColor="Red"></asp:CompareValidator>
+                           ControlToValidate="textContraseña" ControlToCompare="textContraseña2" Text="* Las Contraseña no coinciden" ForeColor="Red"></asp:CompareValidator>
 		            </div>
 
                     <div class="form-group">
@@ -88,23 +94,23 @@
                     <%--<asp:ListBox ID="ListTipo" runat="server"></asp:ListBox>--%>
                     <asp:TextBox ID="textTipo" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rfvTipo" ErrorMessage="Debe ingresar Tipo" 
-                           ControlToValidate="textTipo" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textTipo" runat="server" Text="* Seleccione Tipo" ForeColor="Red"/>
                     </div>
 
                     <div class="form-group">
                      <asp:Label ID="LabelNacimiento" runat="server" Text="Nacimiento"></asp:Label>
 		             <asp:TextBox ID="textNacimiento" TextMode="Date" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rfvNacimiento" ErrorMessage="Debe ingresar Nacimiento" 
-                           ControlToValidate="textNacimiento" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textNacimiento" runat="server" Text="* Ingrese Fecha de Nacimiento" ForeColor="Red"/>
 		            </div>
 
                     <div class="form-group">
                      <asp:Label ID="LblDNI" runat="server" Text="DNI"></asp:Label>
 		             <asp:TextBox ID="textDNI" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rfvDNI" ErrorMessage="Debe ingresar DNI" 
-                           ControlToValidate="textDNI" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textDNI" runat="server" Text="*Ingrese DNI" ForeColor="Red"/>
                      <asp:RangeValidator ID="rvDNI" MinimumValue="11111111" MaximumValue="99999999" Type="Integer" 
-                     ControlToValidate="textDNI" runat="server" ErrorMessage="Debe ingresar un DNI valido" Text="*" ForeColor="Red"></asp:RangeValidator>
+                     ControlToValidate="textDNI" runat="server" ErrorMessage="Debe ingresar un DNI valido" Text=" * Debe Ingresar un DNI Valido" ForeColor="Red"></asp:RangeValidator>
 		            </div>
                     
                     <div class="form-group">
@@ -112,7 +118,7 @@
                     <%--<asp:ListBox ID="ListCarrera" runat="server"></asp:ListBox>--%>
                     <asp:TextBox ID="textCarrera" CssClass="form-control" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rfvCarrera" ErrorMessage="Debe ingresar Carrera" 
-                           ControlToValidate="textCarrera" runat="server" Text="*" ForeColor="Red"/>
+                           ControlToValidate="textCarrera" runat="server" Text="* Seleccione Carrera" ForeColor="Red"/>
                     </div>
 
                     <div class="form-group">
@@ -142,7 +148,7 @@
 									</div>--%>
 		            </div>
                     <asp:Label ID="lblTexto" runat="server" Text=""></asp:Label>
-		          </form>
+		                    </form>
 		         <%-- <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>--%>
 		        </div>
 		      </div>
